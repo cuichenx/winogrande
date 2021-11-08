@@ -1,3 +1,11 @@
+# 11-711 Assignment 3 - WinoGrande
+
+Emmy Liu, Chen Cui, Kenneth Zheng
+
+For this assignment, we reproduced the results of [WinoGrande (Sakaguchi et al. 2019)](https://arxiv.org/pdf/1907.10641.pdf). In addition to the authors' original codebase, we added some additional scripts in `scripts/` which were used to compile results and perform error analysis. All of our results for reproduction and error analysis are located in `spreadsheets/`, in csv format. 
+
+- - -
+
 # WinoGrande 
 
 Version 1.1 
