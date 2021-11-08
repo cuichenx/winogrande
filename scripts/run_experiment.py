@@ -52,8 +52,8 @@ from pytorch_transformers import (WEIGHTS_NAME, BertConfig,
 from pytorch_transformers import AdamW, WarmupLinearSchedule
 
 #from scripts.adhoc_models import RobertaForMultipleChoice
-from scripts.roberta_mc import RobertaForMultipleChoice
-from scripts.utils import (compute_metrics, convert_examples_to_features,
+from roberta_mc import RobertaForMultipleChoice
+from utils import (compute_metrics, convert_examples_to_features,
                                 output_modes, processors,
                                 convert_multiple_choice_examples_to_features)
 

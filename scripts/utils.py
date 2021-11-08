@@ -332,15 +332,15 @@ def convert_examples_to_features(examples,
         else:
             raise KeyError(output_mode)
 
-        if ex_index < 5:
-            logger.info("*** Example ***")
-            logger.info("guid: %s" % (example.guid))
-            logger.info("tokens: %s" % " ".join(
-                [str(x) for x in tokens]))
-            logger.info("input_ids: %s" % " ".join([str(x) for x in input_ids]))
-            logger.info("input_mask: %s" % " ".join([str(x) for x in input_mask]))
-            logger.info("segment_ids: %s" % " ".join([str(x) for x in segment_ids]))
-            logger.info("label: %s (id = %d)" % (example.label, label_id))
+        # if ex_index < 5:
+        #     logger.info("*** Example ***")
+        #     logger.info("guid: %s" % (example.guid))
+        #     logger.info("tokens: %s" % " ".join(
+        #         [str(x) for x in tokens]))
+        #     logger.info("input_ids: %s" % " ".join([str(x) for x in input_ids]))
+        #     logger.info("input_mask: %s" % " ".join([str(x) for x in input_mask]))
+        #     logger.info("segment_ids: %s" % " ".join([str(x) for x in segment_ids]))
+        #     logger.info("label: %s (id = %d)" % (example.label, label_id))
 
         features.append(
             InputFeatures(input_ids=input_ids,
@@ -425,17 +425,17 @@ def convert_multiple_choice_examples_to_features(examples, label_list, max_seq_l
 
         label_id = label_map[example.label]
 
-        if ex_index < 5:
-            logger.info("*** Example ***")
-            logger.info(f"example_id: {example.guid}")
-            for choice_idx, (tokens, input_ids, input_mask, segment_ids) in enumerate(
-                    option_features):
-                logger.info(f"choice: {choice_idx}")
-                logger.info(f"tokens: {' '.join(tokens)}")
-                logger.info(f"input_ids: {' '.join(map(str, input_ids))}")
-                logger.info(f"input_mask: {' '.join(map(str, input_mask))}")
-                logger.info(f"segment_ids: {' '.join(map(str, segment_ids))}")
-            logger.info(f"label: {label_id}")
+        # if ex_index < 5:
+        #     logger.info("*** Example ***")
+        #     logger.info(f"example_id: {example.guid}")
+        #     for choice_idx, (tokens, input_ids, input_mask, segment_ids) in enumerate(
+        #             option_features):
+        #         logger.info(f"choice: {choice_idx}")
+        #         logger.info(f"tokens: {' '.join(tokens)}")
+        #         logger.info(f"input_ids: {' '.join(map(str, input_ids))}")
+        #         logger.info(f"input_mask: {' '.join(map(str, input_mask))}")
+        #         logger.info(f"segment_ids: {' '.join(map(str, segment_ids))}")
+        #     logger.info(f"label: {label_id}")
 
         features.append(
             MultipleChoiceFeatures(
