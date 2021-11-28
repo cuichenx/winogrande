@@ -6,7 +6,8 @@ def proc(sent):
         sent += '.'
     if not sent[0].isupper():  # start with a capital letter
         sent = sent[0].upper() + sent[1:]
-    return sent
+    # escape quotation characters
+    return sent.replace('"', '\\"')
 
 
 def preproc_to_winogrande_format(df, out_path):
